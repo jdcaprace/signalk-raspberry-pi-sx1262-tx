@@ -4,7 +4,7 @@
   "description": "SignalK node server plugin that send data with LoRa sx1262 module on Raspberry-Pi",
   "license": "MIT",
   "homepage": "https://github.com/jdcaprace/signalk-raspberry-pi-sx1262-tx#readme",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "keywords": [
     "signalk-node-server-plugin"
