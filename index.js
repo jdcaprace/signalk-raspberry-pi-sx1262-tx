@@ -151,7 +151,7 @@ module.exports = function (app) {
       console.log('Enter in sendingmessage.');
       txtmessage = buildingpayloadmessage();
       console.log('txtmessage to be send: ', txtmessage);
-      const python_process = spawner('python3', ['./tx.py', txtmessage]);
+      const python_process = spawner('python', ['/home/pi/.signalk/node_modules/signalk-raspberry-pi-sx1262-tx/tx.py', txtmessage]);
       console.log('After the call of Python');
       python_process.stdout.on('data', (data) => {
         console.log('Data received from python script:', data.toString());
