@@ -150,7 +150,7 @@ module.exports = function (app) {
     function sendingmessage(){
       console.log('Enter in sendingmessage.');
       var txtmessage = buildingpayloadmessage();
-      //console.log('txtmessage: ', txtmessage);
+      console.log('txtmessage to be send: ', txtmessage);
       const python_process = spawner('python3', ['./tx.py', txtmessage]);
       python_process.stdout.on('data', (data) => {
         console.log('Data received from python script:', data.toString());
