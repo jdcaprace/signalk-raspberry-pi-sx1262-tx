@@ -145,13 +145,14 @@ module.exports = function (app) {
       var message = shipid + ';' + today + ';' + toprint + addpayload;
       console.log('Payload message: ', message);
       return message;
-    }//End of constructing the message. 
+    }//End of constructing the message.
   	 
     function sendingmessage(){
       console.log('Enter in sendingmessage.');
-      var txtmessage = buildingpayloadmessage();
+      txtmessage = buildingpayloadmessage();
       console.log('txtmessage to be send: ', txtmessage);
       const python_process = spawner('python3', ['./tx.py', txtmessage]);
+      console.log('After the call of Python');
       python_process.stdout.on('data', (data) => {
         console.log('Data received from python script:', data.toString());
       });
